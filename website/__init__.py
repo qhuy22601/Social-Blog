@@ -25,7 +25,6 @@ def createapp():
     @loginManager.user_loader
     def userLoaded(id):
         return Users.query.filter_by(id =int(id)).first()
-
     return socketio, app
 
 def createdatabase(app):
