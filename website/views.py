@@ -58,7 +58,8 @@ def register():
 @views.route("/post")
 def post():
     posts = Posts.query.all()
-    return render_template('posts.html', posts = posts[::-1])
+    users = Users.query.all()
+    return render_template('posts.html', posts = posts[::-1], users = users[::1])
  
 @login_required
 @views.route("/logout")
@@ -91,6 +92,16 @@ def message():
         data.append(da.to)
     data = list(dict.fromkeys(data))
     return render_template('message.html', people=data)
+
+
+@views.route('/pro5/<string:user>')
+@login_required
+def pro5(user):
+    exists = Users.query.filter_by(username=user).first()
+    if exists:
+        d = Posts.query.all()
+        m = Users.query.filter_by(username = user).first()
+        return render_template('pro5.html', posts=d[::-1], name = m) 
 
 @views.route('/message/to=<string:to>')
 @login_required

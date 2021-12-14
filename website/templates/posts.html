@@ -5,18 +5,32 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name = "viewport" content="width = device-width, initial-scale = 1.0">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <title>Login</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <title>Post</title>
         <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
             
             .not{
-                margin-left: 200px;
+                text-align: left;
+                justify-content: center;
+                position: sticky;
+                top: 0;
+                z-index: 999;
             }
             .not p{
-                font-size: 40px;
+                justify-content: center ;
             }
             .btn{
-                margin-left: 60px;
+                margin-left: 90px;
                 width: 150px;
                 height: 50px;
             }
@@ -27,36 +41,185 @@
                 border-color: black;
                 border-style: double;
             }
+            .cont{
+                background-color: #e7e7e7;
+            }
+            .tt{
+                text-align: center;
+                justify-content: center;
+                font-size: 35px;
+                margin-left: 80px;
+                margin-top: 8px;
+            }
+            .ttt{
+                font-family: 'Roboto', sans-serif;
+                font-size: 26px;
+                margin-left: 19px;
+            }
+            .frd{
+                border:  1px solid #c9c7c7;
+                position: sticky;
+                top: 0;
+                z-index: 999;
+                margin-top: 50px;
+            }
+            .nav{
+                height: 70px;
+
+            }
+            .logo{
+                justify-content: center;
+                text-align: center;
+                font-size: 35px;
+                background-color: #1ed12d;
+                background-image: linear-gradient(to right, #00ff2a 43%, #ff0000 33%, #ff00dd );
+                background-size: 100%;
+                -webkit-background-clip: text;
+                -moz-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                -moz-text-decoration-color: transparent;
+                text-transform: uppercase;
+            }
+            .nav a{
+                display:inline-block;              
+            }
+            .search-bar {
+                margin-left: 500px;
+                display: inline-block;
+                justify-content: center;
+                text-align: center;
+                margin-right: 200px;
+                margin-top: 15px;
+            }
+            
+            .search-bar input {
+                justify-content: center;
+                outline: none;
+                border: none;
+                width: 300px;
+                background-color: #e2dede;
+                flex: 1;
+                border-radius: 8px;
+                font-family: "Segoe UI";
+                padding: 8px 8px 8px 8px;
+            }
+            
+            .search-bar input::placeholder {
+                color: #919191;
+            }
+            .diff{
+                background-color: #ffffff;
+                padding:1px;
+                position: sticky;
+                top: 0;
+                z-index: 999;
+            }
+            .container{
+                margin-top: 20px;
+            }
+            .mess{
+                color: black;
+            }
+            .itemm{
+                margin-top: 15px;
+                margin-right: 30px;
+            }
+            #input_field{
+                background: url(https://icon-library.com/images/search-bar-icon-png/search-bar-icon-png-16.jpg) no-repeat scroll 5px 5px;
+                padding-left:30px;
+                background-size: 30px;
+                background-color: #d4d4d4;
+                justify-content: center;
+                color: black;
+                
+            }
+            .card-text {
+                font-size: 25px;
+            }
+            .time{
+                font-size: 15   px;
+            }
+            .fr{
+                font-size: 18px;
+                font-family: 'Roboto', sans-serif;
+                color: #8a8989;
+            }
+            .contact-name{
+                border-radius: 8px;
+                font-family: "Segoe UI";
+                margin-left: 20px;
+                color: black;
+                font-size: 22px;
+                text-decoration: none!important;
+            }
+            .fill-div{
+                text-decoration: none;
+            }
         </style>
     </head>
     <body>
         <div class="cont">
-        <div class="container my-5">
+            <div class="diff">
+            <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link logo">HTK</a>
+                </li>
+                <li class="nav-item">
+                    <div class="search-chat">
+                        <div class="search-bar">
+                            <input type="text" placeholder="Search" class="input-required" id="input_field">
+                        </div>
+                    </div>
+                </li>
+                    <a href="/create-post"><ion-icon class="itemm"  name="add-circle-outline" style="font-size:40px" ></ion-icon></a>
+                    <a href="/message"><ion-icon class="itemm" name="chatbubbles-outline" style="font-size:40px" type="submit"></ion-icon></a>
+                    <a href="/" ><ion-icon class="itemm" name="log-out-outline" style="font-size:40px"></a>
+                </a></p>
+              </ul>
+            </div>
+        <div class="container">
         <div class="row align-items-start">
             <div class="col">
                 {% if posts|length !=0 %}
                     {% for post in posts%}
-                    <div class="card" style="width: 40rem;">
+                    <div class="card" style="width: 35rem;">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ post.by }} </h5>
+                          </div>
                         {% if post.link| length!=0 %}
                         <img src="{{ post.link }}" class="card-img-top" alt="...">
                         {% endif %}
                         <div class="card-body">
-                          <h5 class="card-title">{{ post.by }} at {{ post.date.strftime('%d/%m/%Y-%H:%M')}}</h5>
-                          <p class="card-text">{{ post.desc}}</p>
+                          <p class="card-text">{{ post.desc}} </p>
+                          <p class="time">{{ post.date.strftime('%d/%m/%Y-%H:%M')}}</p>
                         </div>
                       </div>
                     {% endfor%}
                 {% else %}
                 <div class="alert alert-dark" role="alert">
                     Chưa có bài viết nào. Hãy bắt đầu bằng cách đăng 1 bài viết.
-                  </div>
+                </div>
                 {% endif %}
             </div>
             <div class="col not">
-                <p> Chào {{ current_user.username }}</p>
-                <p><a href="create-post"><button class="btn btn-outline-success">Tạo bài viết</button></a></p>
-                <p><a href="/message"><button class="btn btn-outline-success">Messenger</button></a></p>
-                <p><a href="/"><button class="btn btn-outline-success">Đăng xuất</button></a></p>
+                <p class="tt" >{{ current_user.username }}</p>
+                <div class="frd">
+                    <p class="fr"> Friends:</p>
+                    {% for u in users %}
+                        {% if u.username != current_user.username %}
+                            <!-- <p class="ttt">{{ u.username }}</p>  -->
+                            <a href="/pro5/{{u.username}}" class="fill-div">
+                                <div class="chat-right">
+                                    <div class="chat-right-top">
+                                        <span class="contact-name">{{u.username}}</span>
+                                    </div>
+                                </div>
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                    
+                   
+                </div>
             </div>
         </div>
     </div>
